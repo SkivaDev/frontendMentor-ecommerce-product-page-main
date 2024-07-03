@@ -4,6 +4,10 @@ const Navigation = () => {
   return (
     <div>
       <nav>
+        <div>
+          <img src="" alt="" />
+          logo
+        </div>
         <ul>
           <li>
             <a href="/">Home</a>
