@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const Navigation = () => {
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -30,17 +29,33 @@ const Navigation = () => {
               Women
             </a>
           </li>
+          <li>
+            <a href="/" className="hover:text-black transition-all">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/" className="hover:text-black transition-all">
+              Contact
+            </a>
+          </li>
         </ul>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-[34px] text-[20px] md:text-[16px]  w-full md:w-auto pt-[30px] md:pt-0 border-t border-grayish-violet md:border-none">
-          <a href="" className="font-bold text-grayish-violet hover:text-black">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-[34px] text-[20px] md:text-[16px] w-full md:w-auto pt-[30px] md:pt-0 border-t border-grayish-violet md:border-none">
+          {/* <a href="" className="font-bold text-grayish-violet hover:text-black">
             Login
-          </a>
-          <a
+          </a> */}
+          <button>
+            <img src="/images/icon-cart.svg" alt="icon cart" />
+          </button>
+          {/* <a
             href="/"
-            className="block py-[8px] px-[24px] rounded-full text-[20px] md:text-[16.2px] font-fraunces font-bold tracking-[-0.6992px] transition-all bg-cyan text-white hover:bg-light-cyan"
+            className="block py-[8px] px-[24px] rounded-full text-[20px] md:text-[16.2px] font-fraunces font-bold tracking-[-0.6992px] transition-all bg-cyan text-black hover:bg-light-cyan"
           >
             Sign Up
-          </a>
+          </a> */}
+          <button className="w-[50px]">
+            <img src="/images/image-avatar.png" alt="image avatar" />
+          </button>
         </div>
       </div>
       <button
