@@ -22,10 +22,10 @@ const Navigation = () => {
       <div className="flex md:flex flex-col md:flex-row justify-between items-center w-full">
         <div
           className={`${
-            isOpen ? "translate-y-[20%]" : "translate-y-[-120%]"
-          }  absolute md:relative gap-8 md:gap-0 p-8 md:p-0 top-1/2 md:top-0 left-1/2 md:left-0 translate-x-[-50%]  text-black md:text-black md:transform-none bg-dark-violet md:bg-transparent w-full max-w-[90%] md:max-w-none rounded-lg md:rounded-none transition-all duration-500`}
+            isOpen ? "translate-y-0" : "translate-y-[-120%]"
+          }  absolute md:relative gap-8 md:gap-0 p-8 py-[70px] md:p-0 top-[-17px] md:top-0 right-[-47px] md:right-0 translate-x-[-50%]  text-black md:text-black md:transform-none w-full max-w-[75vw] md:max-w-none transition-all duration-500 bg-white h-screen md:h-auto`}
         >
-          <ul className="flex flex-col md:flex-row gap-[35px] md:mr-[46.4px] text-[20px] md:text-[15px] font-medium text-center md:text-left text-grayish-violet">
+          <ul className="flex flex-col md:flex-row gap-[35px] md:mr-[46.4px] text-[20px] md:text-[15px] font-medium text-grayish-violet">
             <li>
               <a href="/" className="hover:text-black transition-all">
                 Collections

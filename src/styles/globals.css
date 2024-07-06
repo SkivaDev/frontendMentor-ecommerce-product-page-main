@@ -45,16 +45,16 @@ body {
 
 .open.hamburger {
   position: fixed;
-  top: 40px;
+  top: 20px;
 }
 
 .open .hamburger__box1 {
-  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+  transform: rotate(45deg) translate(.3125rem, 0.3125rem);
 }
 
 .open .hamburger__box2 {
   transform: scaleY(0);
 }
 .open .hamburger__box3 {
-  transform: rotate(-45deg) translate(0.5rem, -0.4375rem);
+  transform: rotate(-45deg) translate(0.3125rem, -0.3125rem);
 }
