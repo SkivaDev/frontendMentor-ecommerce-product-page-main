@@ -58,3 +58,24 @@ body {
 .open .hamburger__box3 {
   transform: rotate(-45deg) translate(0.3125rem, -0.3125rem);
 }
+
+.header__nav li {
+  position: relative;
+}
+
+.header__nav li:after {
+  background-color: #e13c2f;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  transition: width .5s ease;
+  width: 0;
+}
+
+.header__nav li.active:after, .header__nav li:hover:after {
+  width: 100%;
+}
