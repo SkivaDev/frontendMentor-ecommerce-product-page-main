@@ -5,7 +5,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="relative flex items-center gap-[57px] my-[17px] md:my-[28px] px-[22.6px] md:px-[39.6px] w-full max-w-[1190px] mx-auto">
+    <nav className="relative flex items-center gap-[57px] py-[17px] md:pt-[28px] md:pb-[34px] px-[22.6px] md:px-[39.6px] w-full max-w-[1190px] mx-auto md:border-b md:*:border-grayish-blue">
       <button
         className={`flex md:hidden hamburger ${isOpen ? "open" : ""}`}
         onClick={() => {
@@ -23,7 +23,7 @@ const Navigation = () => {
         <div
           className={`${
             isOpen ? "translate-y-0" : "translate-y-[-120%]"
-          }  absolute md:relative gap-8 md:gap-0 p-8 py-[70px] md:p-0 top-[-17px] md:top-0 right-[-47px] md:right-0 translate-x-[-50%]  text-black md:text-black md:transform-none w-full max-w-[75vw] md:max-w-none transition-all duration-500 bg-white h-screen md:h-full`}
+          }  absolute md:relative gap-8 md:gap-0 p-8 py-[70px] md:p-0 top-[-17px] md:top-0 right-[-47px] md:right-0 translate-x-[-50%] text-black md:text-grayish-blue md:transform-none w-full max-w-[75vw] md:max-w-none transition-all duration-500 bg-white h-screen md:h-full`}
         >
           <ul className="header__nav flex flex-col md:flex-row gap-[33px] text-[20px] md:text-[15px] h-full font-medium">
             <li>
