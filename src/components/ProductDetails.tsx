@@ -10,6 +10,7 @@ const ProductDetails = () => {
                 <p>Product Price</p>
                 <p>Product Description</p>
                 <button>Add to Cart</button>
+                <img src="" alt="icon" />
             </div>
         </div>
     </section>
