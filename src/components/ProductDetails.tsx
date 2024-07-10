@@ -4,7 +4,10 @@ const ProductDetails = () => {
   return (
     <section>
         <div className='w-full max-w-[1190px] mx-auto'>
-            <div>imagenes carrucel</div>
+            <div>
+              <img src="" alt="" />
+              imagenes carrucel
+            </div>
             <div>
                 <h1>Product Name</h1>
                 <p>Product Price</p>
