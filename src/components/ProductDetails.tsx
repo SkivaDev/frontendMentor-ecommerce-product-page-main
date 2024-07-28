@@ -1,13 +1,11 @@
 import React from 'react'
+import ImagesCarousel from './ImagesCarousel'
 
 const ProductDetails = () => {
   return (
     <section>
         <div className='w-full max-w-[1190px] mx-auto'>
-            <div>
-              <img src="" alt="" />
-              imagenes carrucel
-            </div>
+            <ImagesCarousel />
             <div>
                 <h1>Product Name</h1>
                 <p>Product Price</p>
