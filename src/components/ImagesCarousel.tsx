@@ -2,7 +2,7 @@ import React from "react";
 
 const ImagesCarousel = () => {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex basis-0 grow-[2] shrink flex-wrap">
       <div className="flex-shrink flex-grow-[2]">
         <div className="flex flex-wrap">
           <div className="w-full h-full min-h-[500px] relative">
@@ -15,7 +15,7 @@ const ImagesCarousel = () => {
                         </button>
                     </div>
                 </label>
-                <figure className="left-[56px] w-[700px] flex m-0 opacity-0 text-center invisible h-full min-h-[500px] p-4 absolute top-0">
+                <figure className="left-[56px] w-[700px] flex m-0 opacity-100 z-[1] text-center visible h-full min-h-[500px] p-4 absolute top-0">
                     <img src="https://http2.mlstatic.com/D_NQ_NP_685237-MPE75032805143_032024-O.webp" alt="" className="cursor-zoom-in h-auto object-contain pt-[24px] w-full" />
                 </figure>
               </span>
