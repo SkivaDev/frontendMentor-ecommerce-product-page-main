@@ -1,21 +1,31 @@
-import React from 'react'
-import ImagesCarousel from './ImagesCarousel'
+import React from "react";
+import ImagesCarousel from "./ImagesCarousel";
 
 const ProductDetails = () => {
   return (
     <section>
-        <div className='w-full max-w-[1190px] mx-auto flex grow-0 shrink flex-wrap'>
-            <ImagesCarousel />
-            <div className='basis-0 grow shrink max-w-[380px] min-w-[380px] w-[380px] ml-[40px]'>
-                <h1>Product Name</h1>
-                <p>Product Price</p>
-                <p>Product Description</p>
-                <button>Add to Cart</button>
-                <img src="" alt="icon" />
-            </div>
+      <div className="w-full max-w-[1190px] mx-auto flex grow-0 shrink flex-wrap">
+        <ImagesCarousel />
+        <div className="basis-0 grow shrink max-w-[380px] min-w-[380px] w-[380px] ml-[40px]">
+          <h2>Sneaker Company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p>
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div>
+            <div>$125.00</div>
+            <div>$250.00</div>
+          </div>
+          <div>
+            <button>+ 0 -</button>
+            <button>Add to Cart</button>
+          </div>
         </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;
