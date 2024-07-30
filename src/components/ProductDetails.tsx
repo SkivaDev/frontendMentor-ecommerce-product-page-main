@@ -4,9 +4,9 @@ import ImagesCarousel from "./ImagesCarousel";
 const ProductDetails = () => {
   return (
     <section>
-      <div className="w-full max-w-[1190px] mx-auto flex grow-0 shrink flex-wrap">
+      <div className="w-full max-w-[1190px] mx-auto pt-[90px] flex grow-0 shrink flex-wrap">
         <ImagesCarousel />
-        <div className="basis-0 grow shrink max-w-[380px] min-w-[380px] w-[380px] ml-[40px]">
+        <div className="basis-0 grow shrink max-w-[535px] min-w-[535px] w-[535px] ml-[40px]">
           <h2>Sneaker Company</h2>
           <h1>Fall Limited Edition Sneakers</h1>
           <p>
