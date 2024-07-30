@@ -1,5 +1,6 @@
 import React from "react";
 import ImagesCarousel from "./ImagesCarousel";
+import AccountingButton from "./AccountingButton";
 
 const ProductDetails = () => {
   return (
@@ -22,7 +23,7 @@ const ProductDetails = () => {
             <div className="">$250.00</div>
           </div>
           <div>
-            <button>+ 0 -</button>
+            <AccountingButton />
             <button>Add to Cart</button>
           </div>
         </div>
