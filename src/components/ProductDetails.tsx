@@ -15,7 +15,10 @@ const ProductDetails = () => {
             the weather can offer.
           </p>
           <div className="flex flex-col gap-[5px] mt-[17px]">
-            <div className="text-[30px] font-bold">$125.00</div>
+            <div className="text-[30px] font-bold inline relative">
+              $125.00
+              <span className="absolute top-[10px] left-[123px] py-[2px] px-[10px] text-[16px] bg-red-600 text-white rounded-md">50%</span>
+            </div>
             <div className="">$250.00</div>
           </div>
           <div>
