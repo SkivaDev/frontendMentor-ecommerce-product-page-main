@@ -4,7 +4,7 @@ const AccountingButton = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex justify-between items-center w-[150px] py-[8px] px-[14px] bg-slate-300">
+    <div className="flex justify-between items-center w-[159px] py-[16px] px-[17px] font-bold bg-light-grayish-blue rounded-[10px]">
       <button
         onClick={() => setCount((count) => count > 0 ? count - 1 : 0)}
         className="text-[18px] font-bold text-orange"

@@ -3,6 +3,7 @@
         "project",
         "Navigation",
         "ProductDetails",
-        "ImagesCarousel"
+        "ImagesCarousel",
+        "AccountingButton"
     ]
 }

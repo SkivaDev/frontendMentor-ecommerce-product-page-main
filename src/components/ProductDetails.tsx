@@ -22,9 +22,12 @@ const ProductDetails = () => {
             </div>
             <div className="">$250.00</div>
           </div>
-          <div>
+          <div className="flex mt-[32px] gap-[15px]">
             <AccountingButton />
-            <button>Add to Cart</button>
+            <button className="flex grow justify-center items-center py-[16px] px-[17px] bg-orange rounded-[10px] gap-[11px] font-bold">
+              <img src="/images/icon-cart.svg" alt="icon-cart" className="w-auto h-max"/>
+              Add to cart
+            </button>
           </div>
         </div>
       </div>
