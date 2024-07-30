@@ -4,6 +4,7 @@
         "Navigation",
         "ProductDetails",
         "ImagesCarousel",
-        "AccountingButton"
+        "AccountingButton",
+        "productStore"
     ]
 }

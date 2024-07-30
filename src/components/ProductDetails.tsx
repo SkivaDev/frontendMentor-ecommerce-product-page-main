@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import ImagesCarousel from "./ImagesCarousel";
 import AccountingButton from "./AccountingButton";
+import { useStore } from "@nanostores/react";
+import { amountProducts, increaseAmountProducts } from "../productStore";
 
 const ProductDetails = () => {
+
+  const [amount, setAmount] = useState(0);
+
   return (
     <section>
       <div className="w-full max-w-[1190px] mx-auto pt-[90px] pb-[127px] flex grow-0 shrink flex-wrap">
@@ -23,16 +28,32 @@ const ProductDetails = () => {
             <div className="">$250.00</div>
           </div>
           <div className="flex mt-[32px] gap-[15px]">
-            <AccountingButton />
-            <button className="flex grow justify-center items-center py-[16px] px-[17px] bg-orange rounded-[10px] gap-[11px] font-bold">
-              <img src="/images/icon-cart.svg" alt="icon-cart" className="w-auto h-max"/>
-              Add to cart
-            </button>
+            <AccountingButton amount={amount} setAmount={setAmount} />
+            <AddToCartButton amount={amount}/>
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+const AddToCartButton = ({amount}:{amount: number}) => {
+
+  const handleAddToCart = () => {
+    console.log("Add to cart button clicked: ", amount);
+
+    increaseAmountProducts(amount);
+  }
+
+  const $amountProducts = useStore(amountProducts);
+
+
+  return (
+    <button onClick={() => handleAddToCart()} className="flex flex-grow justify-center items-center py-[16px] px-[17px] bg-orange rounded-[10px] gap-[11px] font-bold">
+      <img src="/images/icon-cart.svg" alt="icon-cart" className="w-auto h-max"/>
+      Add to cart
+    </button>
+  );
+}
 
 export default ProductDetails;

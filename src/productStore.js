@@ -1,0 +1,9 @@
+import { atom } from "nanostores";
+
+export const amountProducts = atom(0);
+
+export function increaseAmountProducts(amount) {
+  amountProducts.set(amountProducts.get() + amount);
+
+  console.log("amountProducts", amountProducts.get());
+}
