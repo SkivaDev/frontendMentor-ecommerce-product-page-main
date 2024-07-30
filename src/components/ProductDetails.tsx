@@ -6,17 +6,17 @@ const ProductDetails = () => {
     <section>
       <div className="w-full max-w-[1190px] mx-auto pt-[90px] flex grow-0 shrink flex-wrap">
         <ImagesCarousel />
-        <div className="basis-0 grow shrink max-w-[535px] min-w-[535px] w-[535px] ml-[40px]">
-          <h2>Sneaker Company</h2>
-          <h1>Fall Limited Edition Sneakers</h1>
-          <p>
+        <div className="basis-0 grow shrink max-w-[533px] min-w-[533px] w-[533px] ml-[40px] mt-[60px] pr-[86px]">
+          <h2 className="uppercase text-[14px] font-bold tracking-[1.5px]">Sneaker Company</h2>
+          <h1 className="mt-[16px] text-[45px] font-semibold leading-[48px] tracking-[-0.35px]">Fall Limited Edition Sneakers</h1>
+          <p className="mt-[38px] leading-[26px]">
             These low-profile sneakers are your perfect casual wear companion.
             Featuring a durable rubber outer sole, they’ll withstand everything
             the weather can offer.
           </p>
-          <div>
-            <div>$125.00</div>
-            <div>$250.00</div>
+          <div className="flex flex-col gap-[5px] mt-[17px]">
+            <div className="text-[30px] font-bold">$125.00</div>
+            <div className="">$250.00</div>
           </div>
           <div>
             <button>+ 0 -</button>
