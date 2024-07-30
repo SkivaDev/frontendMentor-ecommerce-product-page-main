@@ -5,7 +5,7 @@ import AccountingButton from "./AccountingButton";
 const ProductDetails = () => {
   return (
     <section>
-      <div className="w-full max-w-[1190px] mx-auto pt-[90px] flex grow-0 shrink flex-wrap">
+      <div className="w-full max-w-[1190px] mx-auto pt-[90px] pb-[127px] flex grow-0 shrink flex-wrap">
         <ImagesCarousel />
         <div className="basis-0 grow shrink max-w-[533px] min-w-[533px] w-[533px] ml-[40px] mt-[60px] pr-[86px]">
           <h2 className="uppercase text-[14px] font-bold tracking-[1.5px]">Sneaker Company</h2>
