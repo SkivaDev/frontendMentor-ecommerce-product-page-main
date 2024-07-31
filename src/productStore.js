@@ -7,3 +7,12 @@ export function increaseAmountProducts(amount) {
 
   console.log("amountProducts", amountProducts.get());
 }
+
+export const hoverActive = atom(false);
+
+export function setHoverActive(value) {
+
+  hoverActive.set(value);
+
+  console.log("hoverActive", hoverActive.get());
+}

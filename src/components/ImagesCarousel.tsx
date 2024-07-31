@@ -1,4 +1,6 @@
+import { useStore } from "@nanostores/react";
 import React, { useEffect, useState } from "react";
+import { hoverActive, setHoverActive } from "../productStore";
 
 const ImagesCarousel = () => {
   const [mainImage, setMainImage] = useState("/images/image-product-1.jpg");
@@ -9,6 +11,8 @@ const ImagesCarousel = () => {
     setThumbnailIndex(index);
     setMainImage(src);
   }
+
+  const $hoverActive = useStore(hoverActive);
 
   return (
     <div className="basis-0 grow-[2] shrink flex-wrap">
@@ -54,7 +58,7 @@ const ImagesCarousel = () => {
                 />
               </div>
 
-              <div className="main-image">
+              <div className="main-image" onClick={() => setHoverActive(true)}>
                 <img
                   src={mainImage}
                   alt="Main product"
