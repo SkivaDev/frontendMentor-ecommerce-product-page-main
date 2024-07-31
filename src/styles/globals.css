@@ -79,3 +79,7 @@ body {
 .header__nav li.active:after, .header__nav li:hover:after {
   width: 100%;
 }
+
+.thumbnail-filter {
+  filter: opacity(30%);
+}

@@ -88,7 +88,7 @@ const ImageItem = ({index, thumbnail, active, picture, alt, onHover }: {index:nu
             <img
               src={thumbnail}
               alt={alt}
-              className="h-full w-full object-contain"
+              className={`${active ? "thumbnail-filter" : ""} h-full w-full object-contain`}
             />
           </button>
         </div>
