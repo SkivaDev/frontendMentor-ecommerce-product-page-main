@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ImagesCarousel = () => {
+  const [mainImage, setMainImage] = useState("/images/image-product-1.jpg");
+
+  const [thumbnailIndex, setThumbnailIndex] = useState(1);
+
+  const handleImageSelected = (index: number, src: string) => {
+    setThumbnailIndex(index);
+    setMainImage(src);
+  }
+
   return (
     <div className="basis-0 grow-[2] shrink flex-wrap">
       <div className="flex grow-0 flex-shrink basis-auto">
@@ -8,14 +17,49 @@ const ImagesCarousel = () => {
           <div className="basis-0 grow shrink flex-wrap">
             <div className="w-full h-full min-h-[570px] relative px-[85px]">
               <div className="gallery-column bottom-0 flex gap-[30px] h-auto absolute z-0">
+                <ImageItem
+                  index={1}
+                  thumbnail="/images/image-product-1-thumbnail.jpg"
+                  picture="/images/image-product-1.jpg"
+                  alt="product 1"
+                  active={thumbnailIndex === 1}
+                  onHover={handleImageSelected}
+                />
 
-                <ImageItem thumbnail="/images/image-product-1-thumbnail.jpg" picture="/images/image-product-1.jpg" alt="product 1" />
+                <ImageItem
+                  index={2}
+                  thumbnail="/images/image-product-2-thumbnail.jpg"
+                  picture="/images/image-product-2.jpg"
+                  alt="product 2"
+                  active={thumbnailIndex === 2}
+                  onHover={handleImageSelected}
+                />
 
-                <ImageItem thumbnail="/images/image-product-2-thumbnail.jpg" picture="/images/image-product-2.jpg" alt="product 2" />
+                <ImageItem
+                  index={3}
+                  thumbnail="/images/image-product-3-thumbnail.jpg"
+                  picture="/images/image-product-3.jpg"
+                  alt="product 3"
+                  active={thumbnailIndex === 3}
+                  onHover={handleImageSelected}
+                />
 
-                <ImageItem thumbnail="/images/image-product-3-thumbnail.jpg" picture="/images/image-product-3.jpg" alt="product 3" />
+                <ImageItem
+                  index={4}
+                  thumbnail="/images/image-product-4-thumbnail.jpg"
+                  picture="/images/image-product-4.jpg"
+                  alt="product 4"
+                  active={thumbnailIndex === 4}
+                  onHover={handleImageSelected}
+                />
+              </div>
 
-                <ImageItem thumbnail="/images/image-product-4-thumbnail.jpg" picture="/images/image-product-4.jpg" alt="product 4" />
+              <div className="main-image">
+                <img
+                  src={mainImage}
+                  alt="Main product"
+                  className="cursor-zoom-in h-auto object-contain w-full rounded-[18px]"
+                />
               </div>
             </div>
           </div>
@@ -25,31 +69,31 @@ const ImagesCarousel = () => {
   );
 };
 
-const ImageItem = ({ thumbnail, picture, alt }: { thumbnail: string; picture: string; alt: string }) => {
+const ImageItem = ({index, thumbnail, active, picture, alt, onHover }: {index:number; thumbnail: string; active: boolean; picture: string; alt: string; onHover: (index:number, src: string) => void }) => {
+
+
+  useEffect(() => {
+    
+  }, [active])
+  
+
   return (
-    <>
-      <span className="block">
-        <label htmlFor="" className="relative">
-          <div className="rounded-[20px] mr-0 z-[5] cursor-pointer overflow-hidden relative">
-            <button className="bg-white border-none cursor-pointer outline-none h-[90px] w-[90px] p-[2px]">
-              <img
-                src={thumbnail}
-                alt={alt}
-                className="h-full w-full object-contain"
-              />
-            </button>
-          </div>
-        </label>
-        <figure className="absolute left-[-13px] top-[-494px] w-[477px] flex m-0 opacity-100 z-[1] text-center visible h-full min-h-[480px] p-4">
-          <img
-            src={picture}
-            alt={alt}
-            className="cursor-zoom-in h-auto object-contain w-full rounded-[18px]"
-          />
-        </figure>
-      </span>
-      <input type="text" className="hidden"/>
-    </>
+    <span className="block">
+      <label htmlFor="" className="relative">
+        <div className="z-[5] relative">
+          <button
+            className={`${active ? "border-[2px] border-orange" : ""} rounded-[20px] overflow-hidden bg-white cursor-pointer outline-none h-[90px] w-[90px]`}
+            onMouseEnter={() => onHover(index, picture)}
+          >
+            <img
+              src={thumbnail}
+              alt={alt}
+              className="h-full w-full object-contain"
+            />
+          </button>
+        </div>
+      </label>
+    </span>
   );
 };
 
