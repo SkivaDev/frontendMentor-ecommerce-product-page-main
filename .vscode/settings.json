@@ -6,6 +6,7 @@
         "ImagesCarousel",
         "AccountingButton",
         "productStore",
-        "ImagenesGalleryHover"
+        "ImagenesGalleryHover",
+        "CartNotification"
     ]
 }
