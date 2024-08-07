@@ -12,7 +12,7 @@ const ImagesGalleryHover = () => {
   };
 
   return (
-    <div className="relative w-full max-w-[700px] h-full max-h-[700px] px-[85px] flex flex-col-reverse justify-center items-center">
+    <div className="w-full h-full max-h-[700px] px-[85px] flex flex-col-reverse justify-center items-center">
       <div className="gallery-column flex gap-[30px] h-auto">
         <ImageItem
           index={1}
@@ -52,27 +52,32 @@ const ImagesGalleryHover = () => {
       </div>
 
       <div
-        className="main-image relative w-[500px] h-[500px]"
+        className="main-image relative w-[550px] h-[550px]"
         //   onClick={() => setHoverActive(true)}
       >
         <img
           src={mainImage}
           alt="Main product"
-          className="cursor-zoom-in h-auto object-contain w-full rounded-[18px]"
+          className="cursor-zoom-in h-full object-contain w-full rounded-[18px]"
         />
 
-        <div className="absolute top-0 right-0">
+        <div className="absolute top-[-55px] right-[-17px]">
           <button
             onClick={() => setHoverActive(false)}
-            className="w-[10px] h-[10px] bg-orange rounded-full p-4"
+            className="w-[55px] h-[55px] flex justify-center items-center"
           >
-            X
+            <img src="/images/icon-close.svg" alt="icon-close" className="button-filter w-[20px]"/>
           </button>
         </div>
 
-        <div className="absolute top-[50px] left-[50px]">
-          <button className="w-[40px] h-[40px] flex justify-center items-center bg-white rounded-full">
-            <img src="/images/icon-previous.svg" alt="icon-previous" />
+        <div className="absolute top-[44%] translate-x-[-50%]">
+          <button className="orange-filter w-[55px] h-[55px] flex justify-center items-center bg-white rounded-full">
+            <img src="/images/icon-previous.svg" alt="icon-previous"/>
+          </button>
+        </div>
+        <div className="absolute top-[44%] translate-x-[-50%] right-[-55px]">
+          <button className="orange-filter w-[55px] h-[55px] flex justify-center items-center bg-white rounded-full">
+            <img src="/images/icon-next.svg" alt="icon-next"/>
           </button>
         </div>
       </div>

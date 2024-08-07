@@ -5,6 +5,7 @@
         "ProductDetails",
         "ImagesCarousel",
         "AccountingButton",
-        "productStore"
+        "productStore",
+        "ImagenesGalleryHover"
     ]
 }
