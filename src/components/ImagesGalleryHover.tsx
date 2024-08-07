@@ -54,42 +54,20 @@ const ImagesGalleryHover = () => {
   return (
     <div className="w-full h-full px-[85px] flex flex-col-reverse justify-center items-center gap-[40px]">
       <div className="gallery-column flex gap-[30px] h-auto">
-        <ImageItem
-          index={1}
-          thumbnail="/images/image-product-1-thumbnail.jpg"
-          alt="product 1"
-          active={thumbnailIndex === 1}
-          onThumbnail={handleImageHover}
-        />
-
-        <ImageItem
-          index={2}
-          thumbnail="/images/image-product-2-thumbnail.jpg"
-          alt="product 2"
-          active={thumbnailIndex === 2}
-          onThumbnail={handleImageHover}
-        />
-
-        <ImageItem
-          index={3}
-          thumbnail="/images/image-product-3-thumbnail.jpg"
-          alt="product 3"
-          active={thumbnailIndex === 3}
-          onThumbnail={handleImageHover}
-        />
-
-        <ImageItem
-          index={4}
-          thumbnail="/images/image-product-4-thumbnail.jpg"
-          alt="product 4"
-          active={thumbnailIndex === 4}
-          onThumbnail={handleImageHover}
-        />
+        {images.map((image, index) => (
+          <ImageItem
+            key={index}
+            index={image.id}
+            thumbnail={image.thumbnail}
+            active={thumbnailIndex === image.id}
+            alt={image.alt}
+            onThumbnail={handleImageHover}
+          />
+        ))}
       </div>
 
       <div
         className="main-image relative w-[550px] h-[550px]"
-        //   onClick={() => setHoverActive(true)}
       >
         <img
           src={mainImage}
