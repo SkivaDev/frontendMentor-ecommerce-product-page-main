@@ -11,43 +11,79 @@ const ImagesGalleryHover = () => {
     setMainImage(src);
   };
 
+  const handleImageHover = (imageId: number) => {
+    if (imageId < 1) {
+      setThumbnailIndex(4);
+      setMainImage(images[3].picture);
+    } else if (imageId > 4) {
+      setThumbnailIndex(1);
+      setMainImage(images[0].picture);
+    } else {
+      setThumbnailIndex(imageId);
+      setMainImage(images[imageId - 1].picture);
+    }
+  };
+
+  const images = [
+    {
+      id: 1,
+      thumbnail: "/images/image-product-1-thumbnail.jpg",
+      picture: "/images/image-product-1.jpg",
+      alt: "product 1",
+    },
+    {
+      id: 2,
+      thumbnail: "/images/image-product-2-thumbnail.jpg",
+      picture: "/images/image-product-2.jpg",
+      alt: "product 2",
+    },
+    {
+      id: 3,
+      thumbnail: "/images/image-product-3-thumbnail.jpg",
+      picture: "/images/image-product-3.jpg",
+      alt: "product 3",
+    },
+    {
+      id: 4,
+      thumbnail: "/images/image-product-4-thumbnail.jpg",
+      picture: "/images/image-product-4.jpg",
+      alt: "product 4",
+    },
+  ];
+
   return (
-    <div className="w-full h-full max-h-[700px] px-[85px] flex flex-col-reverse justify-center items-center">
+    <div className="w-full h-full px-[85px] flex flex-col-reverse justify-center items-center gap-[40px]">
       <div className="gallery-column flex gap-[30px] h-auto">
         <ImageItem
           index={1}
           thumbnail="/images/image-product-1-thumbnail.jpg"
-          picture="/images/image-product-1.jpg"
           alt="product 1"
           active={thumbnailIndex === 1}
-          onHover={handleImageSelected}
+          onThumbnail={handleImageHover}
         />
 
         <ImageItem
           index={2}
           thumbnail="/images/image-product-2-thumbnail.jpg"
-          picture="/images/image-product-2.jpg"
           alt="product 2"
           active={thumbnailIndex === 2}
-          onHover={handleImageSelected}
+          onThumbnail={handleImageHover}
         />
 
         <ImageItem
           index={3}
           thumbnail="/images/image-product-3-thumbnail.jpg"
-          picture="/images/image-product-3.jpg"
           alt="product 3"
           active={thumbnailIndex === 3}
-          onHover={handleImageSelected}
+          onThumbnail={handleImageHover}
         />
 
         <ImageItem
           index={4}
           thumbnail="/images/image-product-4-thumbnail.jpg"
-          picture="/images/image-product-4.jpg"
           alt="product 4"
           active={thumbnailIndex === 4}
-          onHover={handleImageSelected}
+          onThumbnail={handleImageHover}
         />
       </div>
 
@@ -66,18 +102,27 @@ const ImagesGalleryHover = () => {
             onClick={() => setHoverActive(false)}
             className="w-[55px] h-[55px] flex justify-center items-center"
           >
-            <img src="/images/icon-close.svg" alt="icon-close" className="button-filter w-[20px]"/>
+            <img
+              src="/images/icon-close.svg"
+              alt="icon-close"
+              className="button-filter w-[20px]"
+            />
           </button>
         </div>
 
         <div className="absolute top-[44%] translate-x-[-50%]">
-          <button className="orange-filter w-[55px] h-[55px] flex justify-center items-center bg-white rounded-full">
-            <img src="/images/icon-previous.svg" alt="icon-previous"/>
+          <button
+            onClick={() => handleImageHover(thumbnailIndex - 1)}
+            className="orange-filter w-[55px] h-[55px] flex justify-center items-center bg-white rounded-full"
+          >
+            <img src="/images/icon-previous.svg" alt="icon-previous" />
           </button>
         </div>
         <div className="absolute top-[44%] translate-x-[-50%] right-[-55px]">
-          <button className="orange-filter w-[55px] h-[55px] flex justify-center items-center bg-white rounded-full">
-            <img src="/images/icon-next.svg" alt="icon-next"/>
+          <button 
+          onClick={() => handleImageHover(thumbnailIndex + 1)}
+          className="orange-filter w-[55px] h-[55px] flex justify-center items-center bg-white rounded-full">
+            <img src="/images/icon-next.svg" alt="icon-next" />
           </button>
         </div>
       </div>
@@ -89,16 +134,14 @@ const ImageItem = ({
   index,
   thumbnail,
   active,
-  picture,
   alt,
-  onHover,
+  onThumbnail
 }: {
   index: number;
   thumbnail: string;
   active: boolean;
-  picture: string;
   alt: string;
-  onHover: (index: number, src: string) => void;
+  onThumbnail: (index: number) => void;
 }) => {
   useEffect(() => {}, [active]);
 
@@ -110,7 +153,7 @@ const ImageItem = ({
             className={`${
               active ? "border-[2px] border-orange" : ""
             } rounded-[20px] overflow-hidden bg-white cursor-pointer outline-none h-[90px] w-[90px]`}
-            // onMouseEnter={() => onHover(index, picture)}
+            onClick={() => onThumbnail(index)}
           >
             <img
               src={thumbnail}
