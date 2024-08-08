@@ -13,7 +13,7 @@ const CartNotification = ({ isOpen }: { isOpen: boolean }) => {
     <div
       className={`${
         isOpen ? "" : "bottom-[100px]"
-      } absolute bottom-[-285px] left-[-165px] w-[360px] text-left bg-white shadow-xl cursor-default transition-all duration-300`}
+      } absolute bottom-[-285px] left-[-300px] md:left-[-250px] lg:left-[-165px] w-[360px] text-left bg-white shadow-xl cursor-default transition-all duration-300`}
     >
       <h3 className="py-[24px] px-[22px] font-bold">Cart</h3>
       <hr />

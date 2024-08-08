@@ -13,7 +13,7 @@ const Navigation = () => {
 
 
   return (
-    <nav className="relative flex items-center gap-[57px] py-[17px] md:pt-[28px] md:pb-[34px] px-[22.6px] md:px-[39.6px] w-full max-w-[1190px] mx-auto md:border-b md:*:border-grayish-blue">
+    <nav className="relative flex items-center gap-[57px] pt-[17px] pb-[26px] md:pt-[28px] md:pb-[34px] px-[22.6px] md:px-[39.6px] w-full max-w-[1190px] mx-auto md:border-b md:*:border-grayish-blue">
       <button
         className={`flex md:hidden hamburger ${isOpen ? "open" : ""}`}
         onClick={() => {
@@ -24,7 +24,7 @@ const Navigation = () => {
         <span className={`hamburger__box hamburger__box2`}></span>
         <span className={`hamburger__box hamburger__box3`}></span>
       </button>
-      <a href="/" className="ml-[32px] md:m-0">
+      <a href="/" className="ml-[33px] md:m-0">
         <img className="max-w-max" src="./images/logo.svg" alt="shortly logo" />
       </a>
       <div className="flex md:flex flex-col md:flex-row justify-between items-center w-full h-full">

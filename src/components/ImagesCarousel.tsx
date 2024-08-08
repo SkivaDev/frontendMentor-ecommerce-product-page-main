@@ -19,8 +19,8 @@ const ImagesCarousel = () => {
       <div className="flex grow-0 flex-shrink basis-auto">
         <div className="flex basis-0 grow-[2] shrink flex-wrap w-full">
           <div className="basis-0 grow shrink flex-wrap">
-            <div className="w-full h-full min-h-[570px] relative px-[85px]">
-              <div className="gallery-column bottom-0 flex gap-[30px] h-auto absolute z-0">
+            <div className="w-full h-full md:min-h-[570px] relative md:px-[85px]">
+              <div className="hidden md:flex gallery-column bottom-0 gap-[30px] h-auto absolute z-0">
                 <ImageItem
                   index={1}
                   thumbnail="/images/image-product-1-thumbnail.jpg"
@@ -62,7 +62,7 @@ const ImagesCarousel = () => {
                 <img
                   src={mainImage}
                   alt="Main product"
-                  className="cursor-zoom-in h-auto object-contain w-full rounded-[18px]"
+                  className="cursor-zoom-in h-[300px] md:h-auto object-cover md:object-contain w-full md:rounded-[18px]"
                 />
               </div>
             </div>
