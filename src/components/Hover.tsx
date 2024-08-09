@@ -12,10 +12,9 @@ const Hover = () => {
     <div
       className={`${
         $hoverActive ? "visible" : "invisible"
-      } absolute z-50 top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center`}
+      } hidden absolute z-50 top-0 left-0 w-full h-full bg-black bg-opacity-50 md:flex items-center justify-center`}
     >
       <ImagesGalleryHover />
-      {/* <button onClick={() => setHoverActive(false)} className="w-[10px] h-[10px] bg-orange rounded-full p-4">X</button> */}
     </div>
   );
 };
