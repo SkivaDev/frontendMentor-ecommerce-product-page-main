@@ -109,7 +109,7 @@ const ImagesCarousel = () => {
                   className="cursor-zoom-in h-[300px] md:h-auto object-cover md:object-contain w-full md:rounded-[18px]"
                 />
 
-                <div className="block md:hidden absolute top-[40%] left-[20x]">
+                <div className="block md:hidden absolute top-[40%] left-[20px]">
                   <button
                     onClick={() => handleImageHover(thumbnailIndex - 1)}
                     className="orange-filter w-[50px] h-[50px] flex justify-center items-center bg-white rounded-full"
