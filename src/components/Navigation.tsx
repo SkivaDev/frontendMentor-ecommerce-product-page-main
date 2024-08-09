@@ -31,7 +31,7 @@ const Navigation = () => {
         <div
           className={`${
             isOpen ? "translate-y-0" : "translate-y-[-120%]"
-          }  absolute md:relative z-10 gap-8 md:gap-0 p-8 py-[70px] md:p-0 top-[-17px] md:top-0 left-0 text-black md:text-grayish-blue md:transform-none w-full max-w-[75vw] md:max-w-none transition-all duration-500 bg-white h-screen md:h-full`}
+          }  absolute md:relative z-20 gap-8 md:gap-0 p-8 py-[70px] md:p-0 top-[-17px] md:top-0 left-0 text-black md:text-grayish-blue md:transform-none w-full max-w-[75vw] md:max-w-none transition-all duration-500 bg-white h-screen md:h-full`}
         >
           <ul className="header__nav flex flex-col md:flex-row gap-[33px] text-[20px] md:text-[15px] h-full font-medium">
             <li>
